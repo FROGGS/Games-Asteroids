@@ -28,7 +28,7 @@ my $screen_w             = $video_info->current_w;
 my $screen_h             = $video_info->current_h;
 $ENV{SDL_VIDEO_CENTERED} = 'center';
 my $app                  = SDLx::App->new( width => $screen_w, height => $screen_h,
-                                           depth => 32, title => "Apocrita", color => 0x000000FF,
+                                           depth => 32, title => "Asteroids", color => 0x000000FF,
                                            flags => SDL_HWSURFACE|SDL_DOUBLEBUF|SDL_NOFRAME, eoq => 1 );
 draw_screenshot();
 
