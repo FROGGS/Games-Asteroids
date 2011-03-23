@@ -7,7 +7,7 @@ use Imager;
 use Imager::Screenshot;
 use Math::Geometry::Planar;
 
-use SDL;
+use SDL 2.531_03;
 use SDL::Events;
 use SDL::Mouse;
 use SDL::Video;
