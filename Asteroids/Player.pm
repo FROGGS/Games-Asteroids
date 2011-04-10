@@ -104,8 +104,8 @@ sub move {
     
     my $r = $app->stash->{player}->r;
     
-    $app->stash->{player}->x( $app->stash->{player}->x + sin(deg2rad($r)) * $app->stash->{player}->v_m );
-    $app->stash->{player}->y( $app->stash->{player}->y - cos(deg2rad($r)) * $app->stash->{player}->v_m );
+    $app->stash->{player}->x( int($app->stash->{player}->x + sin(deg2rad($r)) * $app->stash->{player}->v_m + 0.5) );
+    $app->stash->{player}->y( int($app->stash->{player}->y - cos(deg2rad($r)) * $app->stash->{player}->v_m + 0.5) );
     
     $app->stash->{player}->x( $app->stash->{player}->x % $app->stash->{field}->w );
     $app->stash->{player}->y( $app->stash->{player}->y % $app->stash->{field}->h );
